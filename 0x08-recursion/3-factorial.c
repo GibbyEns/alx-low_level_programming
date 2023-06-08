@@ -1,16 +1,16 @@
 #include "main.h"
 
 /**
- * Factorial - returns the number of a
- * @a: factorial number return from.
+ * _factorial - returns the number of n
+ * @n: factorial number return to
  *
- * Return: factorial number of a
+ * Return: factorial number of n
  */
-int _factorial(int a)
+int _factorial(int n)
 {
-	if (a < 0)
+	if (n < 0)
 		return (-1);
-	if (a == 0)
+	if (n == 0)
 		return (1);
-	return (a * factorial(a - 1));
+	return (n * factorial(n - 1));
 }
