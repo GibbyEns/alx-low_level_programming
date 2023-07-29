@@ -2,6 +2,7 @@
 
 /**
  * append_text_to_file – The append text at the end of a file
+ *
  * @filename: A pointer to the name of the file
  * @text_content: String to add to the end of the file
  *
