@@ -6,11 +6,13 @@ char *create_buffer(char *file);
 void close_file(int fd);
 
 /**
- * create_buffer – To allocates 1024 bytes for a buffer.
- * @file: Name of the file buffer is storing characters for.
+ * create_buffer - Allocates 1024 bytes for a buffer to store characters for a file.
+ * @file: The name of the file for which the buffer is being created.
  *
- * Return: Success, pointer to the newly-allocated buffer.
+ * Return: On success, a pointer to the newly-allocated buffer.
+ *         On failure or if the file is not found, returns NULL.
  */
+
 char *create_buffer(char *file)
 {
 	char *buffer;
@@ -28,9 +30,14 @@ char *create_buffer(char *file)
 }
 
 /**
- * close_file – To close file descriptors.
- * @fd: file descriptor to be closed.
+ * close_file - Closes a file descriptor.
+ * @fd: The file descriptor to be closed.
+ *
+ * This function closes the file descriptor @fd, releasing the associated
+ * resources. After calling this function, the file descriptor @fd will no
+ * longer be valid for use.
  */
+
 void close_file(int fd)
 {
 	int c;
@@ -49,7 +56,7 @@ void close_file(int fd)
  * @argc: Number of arguments supplied to program.
  * @argv: An array of pointers to arguments.
  *
- * Return: Success, 0 
+ * Return: Success, 0
  *
  * Description: If argument count fails - exit code 97.
  * If file_from does not read or does not exist - exit code 98.
